@@ -3,7 +3,7 @@ import './App.css';
 import TransactionsTable from './components/TransactionsTable';
 import AddTransactionForm from './components/AddTransactionForm'
 import SearchBar from './components/SearchBar';
-import AddTransactionButton from './components/AddTransactionButton';
+// import AddTransactionButton from './components/AddTransactionButton';
 
 const App = () => {
  
@@ -59,17 +59,19 @@ const App = () => {
   };
 
 
+
+
   const filteredTransactions = transactions.filter((transaction) =>
     transaction.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
     <div className="App">
-      <h1>The Royal Bank of Flatiron</h1>
+      <h1 className="bank-heading">The Royal Bank of Flatiron</h1>
       <SearchBar handleSearch={(value) => setSearchTerm(value)} />
       <AddTransactionForm addTransaction={addTransaction} />
       <TransactionsTable transactions={filteredTransactions} />
-      <AddTransactionButton onClick={() => console.log('Add Transaction clicked')} />
+      {/* <AddTransactionButton onClick={() => console.log('Add Transaction clicked')} /> */}
     </div>
   );
 };
