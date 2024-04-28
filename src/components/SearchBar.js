@@ -4,7 +4,7 @@ const SearchBar = ({ handleSearch }) => {
   return (
     <input
       type="text"
-      placeholder="Search Transactions"
+      placeholder="Search your Recent Transactions"
       onChange={(e) => handleSearch(e.target.value)}
     />
   );

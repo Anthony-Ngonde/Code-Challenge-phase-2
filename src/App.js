@@ -3,6 +3,7 @@ import './App.css';
 import TransactionsTable from './components/TransactionsTable';
 import AddTransactionForm from './components/AddTransactionForm'
 import SearchBar from './components/SearchBar';
+import AddTransactionButton from './components/AddTransactionButton';
 
 const App = () => {
  
@@ -19,31 +20,31 @@ const App = () => {
       id: 1,
       date: '2019-12-01',
       description: 'South by Southwest Quinoa Bowl at Fresh & Co',
-      category: 'Income',
+      category: 'Food',
       amount: -10.55,
     }, {
       id: 1,
       date: '2019-12-01',
       description: 'South by Southwest Quinoa Bowl at Fresh & Co',
-      category: 'Income',
+      category: 'Food',
       amount: -10.55,
     }, {
       id: 1,
       date: '2019-12-01',
       description: 'Sunglasses,Urban Outfitters',
-      category: 'Income',
+      category: 'Fashion',
       amount: -24.99,
     }, {
       id: 1,
       date: '2019-12-01',
       description: 'Venno,Alice Pays you for Burrito',
-      category: 'Income',
+      category: 'Food',
       amount: 8.75,
     }, {
       id: 1,
       date: '2019-12-01',
       description: 'Chipotle',
-      category: 'Income',
+      category: 'Entertainment',
       amount: -17.59,
     }
    
@@ -57,7 +58,7 @@ const App = () => {
     setTransactions([...transactions, newTransaction]);
   };
 
-  
+
   const filteredTransactions = transactions.filter((transaction) =>
     transaction.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -68,6 +69,7 @@ const App = () => {
       <SearchBar handleSearch={(value) => setSearchTerm(value)} />
       <AddTransactionForm addTransaction={addTransaction} />
       <TransactionsTable transactions={filteredTransactions} />
+      <AddTransactionButton onClick={() => console.log('Add Transaction clicked')} />
     </div>
   );
 };
