@@ -3,7 +3,7 @@ import './App.css';
 import TransactionsTable from './components/TransactionsTable';
 import AddTransactionForm from './components/AddTransactionForm'
 import SearchBar from './components/SearchBar';
-// import AddTransactionButton from './components/AddTransactionButton';
+
 
 const App = () => {
  
@@ -71,7 +71,7 @@ const App = () => {
       <SearchBar handleSearch={(value) => setSearchTerm(value)} />
       <AddTransactionForm addTransaction={addTransaction} />
       <TransactionsTable transactions={filteredTransactions} />
-      {/* <AddTransactionButton onClick={() => console.log('Add Transaction clicked')} /> */}
+    
     </div>
   );
 };

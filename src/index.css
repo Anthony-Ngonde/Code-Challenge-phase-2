@@ -27,12 +27,12 @@ code {
   text-align: center;
 }
 
-/* Styles for the heading */
+
 h1 {
   color: #333;
 }
 
-/* Styles for the transaction table */
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -48,7 +48,7 @@ th {
   background-color: #f2f2f2;
 }
 
-/* Styles for form input fields */
+
 input[type="text"] {
   padding: 8px 12px;
   border: 1px solid #ccc;
@@ -63,7 +63,6 @@ input[type="text"]:focus {
   border-color: dodgerblue;
 }
 
-/* Styles for the search bar */
 input[type="text"].search-bar {
   padding: 8px 12px;
   border: 1px solid #ccc;
@@ -73,7 +72,7 @@ input[type="text"].search-bar {
   box-sizing: border-box;
 }
 
-/* Styles for the add transaction button */
+
 button.add-transaction-button {
   padding: 10px 20px;
   background-color: dodgerblue;
